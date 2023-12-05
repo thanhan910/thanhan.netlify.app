@@ -9,8 +9,8 @@
     ██║╚██╗██║██╔══╝     ██║   ██║     ██║██╔══╝    ╚██╔╝  
     ██║ ╚████║███████╗   ██║   ███████╗██║██║        ██║   
     ╚═╝  ╚═══╝╚══════╝   ╚═╝   ╚══════╝╚═╝╚═╝        ╚═╝    -->
-    <!-- https://app.netlify.com/drop -->
-    <!-- https://github.com/netlify/netlify-drop-demo-landing-page -->
+  <!-- https://app.netlify.com/drop -->
+  <!-- https://github.com/netlify/netlify-drop-demo-landing-page -->
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
@@ -26,6 +26,9 @@
 
   <!-- Styling for this site -->
   <link rel="stylesheet" href="/css/styles.css">
+
+  <!-- Copy text to clipboard functionality -->
+  <script src="/js/copy-text.js"></script>
 </head>
 
 <!-- This class is removed if the user has JavaScript enabled -->
@@ -49,34 +52,90 @@
     <nav class="links">
       <!-- Update <a href=""> to point to your accounts -->
       <!-- Update <span> to your usernames -->
-      <a href="mailto:nthanhan910@gmail.com">
-        <strong>Gmail</strong>
-        <span>nthanhan910@gmail.com</span>
-      </a>
-      <a href="mailto:thanhan910@outlook.com">
-        <strong>Outlook</strong>
-        <span>thanhan910@outlook.com</span>
-      </a>
-      <a href="https://github.com/thanhan910">
+      <div class="nav-line">
+        <strong>E-mail (Gmail)</strong>
+        <span class="nav-line-value">
+          <a href="mailto:nthanhan910@gmail.com" title="Send an E-mail">
+            nthanhan910@gmail.com
+          </a>
+          <button class="copy-button" title="Copy to clipboard" data-clipboard-text="nthanhan910@gmail.com">
+            <span class="copy-icon" aria-hidden="true"></span>
+            <span class="copy-text">Copy</span>
+          </button>
+        </span>
+      </div>
+      <div class="nav-line">
+        <strong>E-mail (Outlook)</strong>
+        <span class="nav-line-value">
+          <a href="mailto:thanhan910@outlook.com" title="Send an E-mail">
+            thanhan910@outlook.com
+          </a>
+          <button class="copy-button" title="Copy to clipboard" data-clipboard-text="thanhan910@outlook.com">
+            <span class="copy-icon" aria-hidden="true"></span>
+            <span class="copy-text">Copy</span>
+          </button>
+        </span>
+      </div>
+      <div class="nav-line">
         <strong>GitHub</strong>
-        <span>@thanhan910</span>
-      </a>
-      <a href="https://www.facebook.com/thanhan910/">
+        <span class="nav-line-value">
+          <a href="https://github.com/thanhan910" title="Go to GitHub">
+            @thanhan910
+          </a>
+          <button class="copy-button" title="Copy to clipboard" data-clipboard-text="https://github.com/thanhan910">
+            <span class="copy-icon" aria-hidden="true"></span>
+            <span class="copy-text">Copy</span>
+          </button>
+        </span>
+      </div>
+      <div class="nav-line">
         <strong>Facebook</strong>
-        <span>@thanhan910</span>
-      </a>
-      <a href="https://www.linkedin.com/in/thanhan910/">
+        <span class="nav-line-value">
+          <a href="https://www.facebook.com/thanhan910/" title="Go to Facebook">
+            @thanhan910
+          </a>
+          <button class="copy-button" title="Copy to clipboard"
+            data-clipboard-text="https://www.facebook.com/thanhan910/">
+            <span class="copy-icon" aria-hidden="true"></span>
+            <span class="copy-text">Copy</span>
+          </button>
+        </span>
+      </div>
+      <div class="nav-line">
         <strong>LinkedIn</strong>
-        <span>@thanhan910</span>
-      </a>
-      <a href="https://m.me/thanhan910">
+        <span class="nav-line-value">
+          <a href="https://www.linkedin.com/in/thanhan910/" title="Go to LinkedIn">
+            in/thanhan910
+          </a>
+          <button class="copy-button" title="Copy to clipboard"
+            data-clipboard-text="https://www.linkedin.com/in/thanhan910/">
+            <span class="copy-icon" aria-hidden="true"></span>
+            <span class="copy-text">Copy</span>
+          </button>
+        </span>
+      </div>
+      <div class="nav-line">
         <strong>Messenger</strong>
-        <span>@thanhan910</span>
-      </a>
-      <a>
+        <span class="nav-line-value">
+          <a href="https://m.me/thanhan910" title="Go to Messenger">
+            @thanhan910
+          </a>
+          <button class="copy-button" title="Copy to clipboard" data-clipboard-text="https://m.me/thanhan910">
+            <span class="copy-icon" aria-hidden="true"></span>
+            <span class="copy-text">Copy</span>
+          </button>
+        </span>
+      </div>
+      <div class="nav-line">
         <strong>Phone</strong>
-        <span>(+61) 416-629-331</span>
-      </a>
+        <span class="nav-line-value">
+          (+61) 416-629-331
+          <button class="copy-button" title="Copy to clipboard" data-clipboard-text="+61416629331">
+            <span class="copy-icon" aria-hidden="true"></span>
+            <span class="copy-text">Copy</span>
+          </button>
+        </span>
+      </div>
 
       <!-- 
   Suburb: Clayton, VIC 3168 

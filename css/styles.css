@@ -18,12 +18,18 @@
   --color-yellow-Y500: #FFB916;
   --color-yellow-Y400: #FFCF50;
 
+  --color-skylight-S500: #6EC1E4;
+  --color-skylight-S400: #A0D1E8;
+
+  --color-wheat-W500: #F5DEB3;
+  --color-wheat-W400: #F5E5C3;
+
   --color-red-R600: #DB4648;
 
   --body-border: .6em;
   --body-padding: 3vw;
   --color-mode: 'light';
-  --background: var(--color-yellow-Y500);
+  --background: var(--color-wheat-W500);
   --background-alt:  var(--color-yellow-Y400);
   --text-color: var(--color-gray-L700);
   --mode-icon: '🌑';
@@ -85,7 +91,7 @@ body {
   gap: 1vw;
   background-color: var(--background);
   border-radius: 5px;
-  font-size: 112.5%;
+  /* font-size: 112.5%; */
   font-family: "Inter UI", Helvetica, Arial, sans-serif;
   line-height: 1.4;;
   color: var(--text-color);
@@ -171,7 +177,7 @@ main {
 
 .about > * {
   margin: 0 0 1rem;
-  font-size: clamp(1rem, 1.5vw, 2.3rem);
+  font-size: clamp(1rem, 1vw, 2.3rem);
 }
 
 .about h1 {
@@ -195,7 +201,7 @@ main {
   flex: 2;
 }
 
-.links > a {
+.links > .nav-line {
   padding-right: var(--body-padding);
   position: relative;
   overflow: hidden;
@@ -204,11 +210,16 @@ main {
   flex: 1;;
   border-bottom: 1px solid var(--border-color);
   text-decoration: none;
-  font-size: clamp(1.5rem, 5vw, 10rem);
+  font-size: clamp(1.5rem, 1vw, 10rem);
   color: var(--text-color);
 }
 
-.links > a > strong {
+.links > .nav-line a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+.links > .nav-line > strong {
   padding-left: var(--body-padding);
   padding-right: .5em;
   position: relative;
@@ -218,7 +229,7 @@ main {
   z-index: 1;
 }
 
-.links > a > strong:after {
+.links > .nav-line > strong:after {
   content: '';
   width: 1px;
   height: 100%;
@@ -232,40 +243,54 @@ main {
 }
 
 @media screen and (min-width: 800px) {
-  .links > a > strong:after {
+  .links > .nav-line > strong:after {
     height: 80%;
   }
 }
 
-.links > a:hover > strong:after,
-.links > a:focus > strong:after {
+.links > .nav-line:hover > strong:after,
+.links > .nav-line:focus > strong:after {
   opacity: .5;
 }
 
-.links > a > span {
+.links > .nav-line > .nav-line-value {
   position: relative;
-  font-size: clamp(1rem, 2vw, 2rem);
+  font-size: clamp(1rem, 1vw, 2rem);
   transition: transform 150ms ease-in-out;
   transform: translateX(-100%);
   z-index: 0;
 }
 
 @media (prefers-reduced-motion) {
-  .links > a > span {
+  .links > .nav-line > .nav-line-value {
     transition: none;
   }
 }
 
-.links > a:hover > span,
-.links > a:focus > span  {
+.links > .nav-line:hover > .nav-line-value,
+.links > .nav-line:focus > .nav-line-value {
   transform: translateX(1em);
 }
 
-.links > a:focus {
+.links > .nav-line .copy-button {
+  background-color: var(--background-alt);
+  border: none;
+  border-radius: 5px;
+  color: var(--text-color);
+  font-size: clamp(1rem, 1vw, 2rem);
+  cursor: pointer;
+}
+
+.links > .nav-line .copy-button:focus {
   outline: none;
 }
 
-.links > a:focus,
-.links > a:focus > strong {
+
+.links > .nav-line:focus {
+  outline: none;
+}
+
+.links > .nav-line:focus,
+.links > .nav-line:focus > strong {
   background-color: var(--background-alt);
 }
